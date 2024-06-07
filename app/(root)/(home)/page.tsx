@@ -1,12 +1,7 @@
-import { SignedIn, UserButton } from "@clerk/nextjs";
 import React from "react";
 
 const Home = () => {
-  return (
-    <SignedIn>
-      <UserButton />
-    </SignedIn>
-  );
+  return <div className="h-screen w-full">Home</div>;
 };
 
 export default Home;
