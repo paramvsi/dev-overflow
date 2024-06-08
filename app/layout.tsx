@@ -12,7 +12,7 @@ import ThemeProvider from "@/context/ThemeProvider";
 export const metadata: Metadata = {
   title: "DevOverflow",
   description:
-    "A community for developers to support each other and create an ecosystem that fosters global growth.",
+    "A community-driven platform for asking and answering programming questions. Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more.",
   icons: {
     icon: "/assets/images/site-logo.svg",
   },
