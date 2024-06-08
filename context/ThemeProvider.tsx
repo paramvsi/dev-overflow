@@ -1,4 +1,4 @@
-"use-client";
+"use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 
@@ -17,12 +17,16 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [mode, setMode] = useState("");
 
   const handleThemeChange = () => {
-    if (mode === "dark") {
-      setMode("light");
-      document.documentElement.classList.add("light");
-    } else {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("prefers-color-scheme: dark").matches)
+    ) {
       setMode("dark");
       document.documentElement.classList.add("dark");
+    } else {
+      setMode("light");
+      document.documentElement.classList.remove("dark");
     }
   };
 
