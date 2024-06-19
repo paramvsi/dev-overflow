@@ -22,6 +22,7 @@ import { QuestionsSchema } from "@/lib/validations";
 import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { useRouter } from "next/navigation";
+import { createQuestion } from "@/lib/actions/question.action";
 
 const Question = () => {
   const type: any = "create";
@@ -42,9 +43,9 @@ const Question = () => {
 
   async function onSubmit(values: z.infer<typeof QuestionsSchema>) {
     setIsSubmitting(true);
-
     try {
-      router.push("/");
+      await createQuestion({});
+      // router.push("/");
     } catch (error) {
     } finally {
       setIsSubmitting(false);
