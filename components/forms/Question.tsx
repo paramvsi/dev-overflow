@@ -21,7 +21,7 @@ import { useTheme } from "@/context/ThemeProvider";
 import { QuestionsSchema } from "@/lib/validations";
 import Image from "next/image";
 import { Badge } from "../ui/badge";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { createQuestion } from "@/lib/actions/question.action";
 
 const Question = () => {
@@ -29,7 +29,7 @@ const Question = () => {
 
   const { mode } = useTheme();
   const editorRef = useRef(null);
-  const router = useRouter();
+  // const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof QuestionsSchema>>({
